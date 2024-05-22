@@ -1,0 +1,130 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #d0d2ff;
+    padding: 20px;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    color: rgb(0, 7, 108);
+    margin: 30px 0 50px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 50px;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery__item {
+    flex-basis: calc(33.333% - 10px);
+    box-sizing: border-box;
+}
+
+.gallery__link {
+    display: block;
+    overflow: hidden;
+}
+
+.gallery__image {
+    width: 100%;
+    display: block;
+    transition: transform 1s ease;
+}
+
+.gallery__image:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    position: relative;
+}
+
+.modal button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.modal .prev {
+    left: 10px;
+}
+
+.modal .next {
+    right: 10px;
+}
+
+.gallery__description {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgb(0, 7, 108); 
+    font-size: 14px;
+    text-align: center; 
+}
+
+.gallery__item:hover .gallery__description {
+    opacity: 1; 
+}
+
+.gallery__link {
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+
+.feedback-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.feedback-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #0056b3;
+}
